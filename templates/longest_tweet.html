@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br> <br>
+<p><strong>"{{tweet}}" </strong> is the longest tweet saved. </p>
+
+{% if not tweet %}
+    There are no saved tweets to show.
+{% endif %}
+
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>*** {{ message }} ***</strong>
+{% endfor %}
+</div>
+
+{% endblock %}
